@@ -5,11 +5,16 @@ import './index.css'
 
 // TODO: Import ThemeProvider and ProjectsProvider from context files
 // TODO: Wrap App with both providers
+import { ThemeProvider } from './context/ThemeContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* TODO: Add ThemeProvider wrapper */}
+    <ThemeProvider>
     {/* TODO: Add ProjectsProvider wrapper */}
-    <App />
+    <ProjectsProvider>
+      <App />
+      </ProjectsProvider>
+    </ThemeProvider>
   </React.StrictMode>,
 )
